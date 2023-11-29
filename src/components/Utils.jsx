@@ -40,7 +40,7 @@ export const GenerateInitMaterials = () =>{
     })
 
     const flechaA = new THREE.TextureLoader().load('/flechas-2.webp');
-    flechaA. flipY = false;
+    flechaA.flipY = false;
     const flechaAM = new THREE.MeshStandardMaterial({
         color: 0xAAAAAA,
         map: flechaA,

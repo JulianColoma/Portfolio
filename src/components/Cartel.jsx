@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState } from "react";
+import React, { useState } from "react";
 import { useGLTF, Html} from "@react-three/drei";
 import Page from "./pages/Page";
 import Contact from "./pages/Contact"
@@ -21,7 +21,7 @@ export function Cartel(props) {
     gsap.to(cartelGroup.rotation, {
       y: cartelGroup.rotation.y + Math.PI * 2,
       duration: 0.7})
-      if(actual == 4){
+      if(actual === 4){
         setActual(actual - 4);
 
       }else{
@@ -33,7 +33,7 @@ export function Cartel(props) {
     gsap.to(cartelGroup.rotation, {
       y: cartelGroup.rotation.y - Math.PI * 2,
       duration: 0.7})
-      if(actual == 0){
+      if(actual === 0){
         setActual(actual + 4);
 
       }else{
@@ -55,7 +55,9 @@ export function Cartel(props) {
             break 
     case 4: ant = 3;
             sig = 0;
-            break       
+            break 
+    default:
+            break      
 
   }
   return (
